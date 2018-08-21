@@ -6,6 +6,8 @@ def key_for_min_value(hash)
   tiniest_value = nil
   hash.each do |key, value|
     if tiniest_value == nil || value < tiniest_value
+      
+      # this way, the smallest value in the hash so far always overwrites the existing tiniest value
       tiniest_value = value
       smallest_key = key
     end
